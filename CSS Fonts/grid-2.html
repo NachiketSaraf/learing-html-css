@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            border: 2px solid red;
+            display: grid;
+            height: 97vh;
+            width: 99vw;
+            grid-template-areas: "nav nav nav"
+                "side-bar article article"
+                "footer footer footer";
+            row-gap: 50px;
+            column-gap: 50px;
+        }
+
+        .item {
+            border: 2px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .navbar {
+            grid-area: nav;
+            background-color: rgb(73, 0, 102);
+        }
+
+        .side {
+            grid-area: side-bar;
+            background-color: lightblue;
+        }
+
+        .content {
+            grid-area: article;
+            background-color: peachpuff;
+        }
+
+        .footer {
+            grid-area: footer;
+            background-color: rgb(255, 136, 0);
+            row-gap: 50px;
+        }
+
+        .item-5 {
+            grid-area: nav;
+            height: 55px;
+            width: 55px;
+            background-color: greenyellow;
+            justify-self: center;
+            align-self: self-start;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item navbar">I'm navbar </div>
+        <div class="item side">I'm sidebar</div>
+        <div class="item content">I'm main content</div>
+        <div class="item footer">Footer</div>
+        <div class="item item-5">I'm left out</div>
+    </div>
+</body>
+
+</html>
